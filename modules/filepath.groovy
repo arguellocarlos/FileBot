@@ -5,18 +5,14 @@
     // get current username
     def user_ = gp_("user.name")
 
-    // fedora mountpoint
-    def mntp = "/run/media/${user_}"
+    // Arch Linux mountpoint
+    def mntp = "~/Videos/Anime/${user_}"
 
     //! OVERRIDE THIS PATH IF NEEDED, ELSE, BLANK IT ("")
-    def override = is_windows ? "H:/" : "$mntp/Videos"
+    def override = is_windows ? "E:/" : "$mntp/Videos"
 
     def mounts = [
-        [label: "Books", winmnt: "F:/", linmnt: "$mntp/Books"],
-        [label: "Data", winmnt: "D:/", linmnt: "$mntp/Data"],
-        [label: "Games", winmnt: "G:/", linmnt: "$mntp/Games"],
-        [label: "Music", winmnt: "E:/", linmnt: "$mntp/Music"],
-        [label: "Videos", winmnt: "H:/", linmnt: "$mntp/Videos"],
+        [label: "Videos", winmnt: "E:/", linmnt: "$mntp/Videos"],
     ]
 
     def guess = (mounts.collect { it[is_windows ? "winmnt" : "linmnt"] as File }.sort { first, second -> first.exists() <=> second.exists() ?: first.diskSpace <=> second.diskSpace }).last()
