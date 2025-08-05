@@ -6,7 +6,7 @@
     def user_ = gp_("user.name")
 
     // Arch Linux mountpoint
-    def mntp = "~/Videos/Anime/${user_}"
+    def mntp = "~/Videos/${user_}"
 
     //! OVERRIDE THIS PATH IF NEEDED, ELSE, BLANK IT ("")
     def override = is_windows ? "E:/" : "$mntp/Videos"
