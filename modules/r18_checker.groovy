@@ -35,7 +35,7 @@
     def is_adult_override = override_tag.find { it[0] == fixed_id && it[1] == db_name } != null
     def is_r18 = info.Keywords.findAll { it in known_tags } || is_same_id || is_adult
 
-    // Apply R18+ tag to the path name
+    // Apply R18+ (Adults) tag to the path name
     is_r18 = is_adult_override ? false : is_r18
-    is_r18 ? "R18+ " : ""
+    is_r18 ? "Adults" : ""
 }
