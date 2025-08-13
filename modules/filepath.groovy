@@ -5,7 +5,7 @@
     // get current username
     def user_ = gp_("user.name")
 
-    // Arch Linux mountpoint
+    // Linux mountpoint
     def mntp = "~/Videos/${user_}"
 
     //! OVERRIDE THIS PATH IF NEEDED, ELSE, BLANK IT ("")
