@@ -54,6 +54,7 @@
         langcode.iso3b + cleanedSubt
     }
 }
+@./sourceorigin.groovy
 {
     // Jellyfin >=10.9 default thumbnail name
     f.image ? "-thumb" : ""
