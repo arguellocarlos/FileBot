@@ -2,9 +2,11 @@
     def customGroups = [
         "Alqanime",
         "BlackLuster",
+        "DantalianSubs",
         "darkflux",
         "It's Anime",
         "Kuramanime",
+        "LastLight",
         "NanDesuKa",
         "ToonsHub",
         "Tsundere-Raws",
@@ -24,5 +26,5 @@
         ""
     }
 
-    group_ ? "[$group_] " : ""
+    group_ ? "[$group_]" : ""
 }
